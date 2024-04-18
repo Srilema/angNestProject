@@ -17,13 +17,13 @@ export class TagsController {
     }
 
     @Post()
-    create(@Body() product: TagEntity) {
-        return this.service.createTag(product);
+    create(@Body() tag: TagEntity) {
+        return this.service.createTag(tag);
     }
 
     @Put()
-    update(@Body() product: TagEntity) {
-        return this.service.updateTag(product);
+    update(@Body() tag: TagEntity) {
+        return this.service.updateTag(tag);
     }
 
     @Delete(':id')
