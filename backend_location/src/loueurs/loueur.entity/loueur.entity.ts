@@ -1,5 +1,6 @@
 import { UtilisateurEntity } from "src/utilisateurs/utilisateur.entity/utilisateur.entity";
-import { Entity, Column, PrimaryGeneratedColumn, OneToMany, OneToOne } from "typeorm";
+import { LocationEntity } from "src/locations/location.entity/location.entity";
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne, OneToOne } from "typeorm";
 
 @Entity()
 export class LoueurEntity {
@@ -20,4 +21,9 @@ export class LoueurEntity {
 
     @OneToOne(()=>UtilisateurEntity, (utilisateur)=> utilisateur.loueur)
     utilisateur: UtilisateurEntity;
+
+    @ManyToOne(() => LocationEntity, location => location.loueurs)
+    location: LocationEntity;
+
+
 }
