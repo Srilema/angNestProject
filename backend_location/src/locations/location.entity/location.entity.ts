@@ -1,3 +1,4 @@
+import { LocatagEntity } from "src/locatags/locatag.entity/locatag.entity";
 import { TagEntity } from "src/tags/tag.entity/tag.entity";
 import { Entity,PrimaryGeneratedColumn,Column, ManyToOne } from "typeorm";
 
@@ -20,5 +21,5 @@ export class LocationEntity {
     description:string;
 
     @ManyToOne(()=> LocatagEntity,(locatag)=>locatag.locations)
-    locations: LocationEntity[]
+    locatag: LocatagEntity[]
 }

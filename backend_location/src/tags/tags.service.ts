@@ -13,7 +13,7 @@ export class TagsService {
     }
 
     async getTag(_id: number): Promise<TagEntity[]> {
-        return await this.tagsRepository.findOne({
+        return await this.tagsRepository.find({
             where: [{ "id": _id }],
             relations:["locatag"]
         });
