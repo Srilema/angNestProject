@@ -1,4 +1,5 @@
-import { Entity,PrimaryGeneratedColumn,Column } from "typeorm";
+import { TagEntity } from "src/tags/tag.entity/tag.entity";
+import { Entity,PrimaryGeneratedColumn,Column, ManyToOne } from "typeorm";
 
 @Entity()
 export class LocationEntity {
@@ -17,4 +18,7 @@ export class LocationEntity {
 
     @Column({ length: 250 })
     description:string;
+
+    @ManyToOne(()=> LocatagEntity,(locatag)=>locatag.locations)
+    locations: LocationEntity[]
 }
