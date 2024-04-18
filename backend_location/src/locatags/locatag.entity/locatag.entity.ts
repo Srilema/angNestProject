@@ -1,10 +1,14 @@
+
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export class AgenceEntity {
+export class LocatagEntity {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({ length: 45 })
-    name:string;
+    @Column()
+    id_location: number;
+    
+    @Column()
+    id_tag: number;
 }
