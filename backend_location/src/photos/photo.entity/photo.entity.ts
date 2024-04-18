@@ -1,14 +1,10 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export class RegionEntity {
+export class PhotoEntity {
     @PrimaryGeneratedColumn()
     id: number;
-
-    @Column()
-    num_dep:number
-
-    @Column({ length: 250 })
-    name:string;
-
+    
+    @Column('longtext')
+    image: string;
 }

@@ -1,11 +1,10 @@
 import { Controller, Post, Body, Get, Put, Delete,Param} from '@nestjs/common';
-import { RegionService } from './region.service';
-import { RegionEntity } from '../regions/region.entity/region.entity';
+import { RegionsService } from './regions.service';
+import { RegionEntity } from './region.entity/region.entity';
 
-@Controller('region')
-export class RegionController {
-    constructor(private service: RegionService) { }
-
+@Controller('regions')
+export class RegionsController {
+    constructor(private service: RegionsService) { }
 
     @Get()
     getAll(@Param() params) {
@@ -31,5 +30,5 @@ export class RegionController {
     deleteUser(@Param() params) {
         return this.service.deleteRegion(params.id);
     }
-}
 
+}

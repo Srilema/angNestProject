@@ -1,14 +1,11 @@
 import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
 @Entity()
-export class RegionEntity {
+export class TagEntity {
+
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column()
-    num_dep:number
-
-    @Column({ length: 250 })
-    name:string;
-
+    @Column({ length: 25 })
+    type:string;
 }
