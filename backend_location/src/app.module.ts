@@ -5,6 +5,8 @@ import { LocationsModule } from './locations/locations.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AgencesModule } from './agences/agences.module';
 import { VillesModule } from './villes/villes.module';
+import { LoueursModule } from './loueurs/loueurs.module';
+import { UtilisateursModule } from './utilisateurs/utilisateurs.module';
 
 @Module({
   imports: [TypeOrmModule.forRoot({
@@ -19,7 +21,9 @@ import { VillesModule } from './villes/villes.module';
 }),
 LocationsModule,
 AgencesModule,
-VillesModule],
+VillesModule,
+LoueursModule,
+UtilisateursModule],
   controllers: [AppController],
   providers: [AppService],
 })
