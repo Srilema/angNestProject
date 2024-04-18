@@ -23,7 +23,7 @@ export class LoueurEntity {
     utilisateur: UtilisateurEntity;
 
     @ManyToOne(() => LocationEntity, location => location.loueurs)
-    location: LocationEntity;
+    location: LocationEntity; 
 
 
 }
