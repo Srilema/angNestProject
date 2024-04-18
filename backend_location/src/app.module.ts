@@ -8,6 +8,8 @@ import { VillesModule } from './villes/villes.module';
 import { LoueursModule } from './loueurs/loueurs.module';
 import { UtilisateursModule } from './utilisateurs/utilisateurs.module';
 import { PhotosModule } from './photos/photos.module';
+import { RegionsModule } from './regions/regions.module';
+import { TagsModule } from './tags/tags.module';
 
 @Module({
   imports: [TypeOrmModule.forRoot({
@@ -25,7 +27,9 @@ AgencesModule,
 VillesModule,
 LoueursModule,
 UtilisateursModule,
-PhotosModule],
+PhotosModule,
+RegionsModule,
+TagsModule],
   controllers: [AppController],
   providers: [AppService],
 })
