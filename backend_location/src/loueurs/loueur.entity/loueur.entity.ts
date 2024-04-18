@@ -1,3 +1,4 @@
+import { UtilisateurEntity } from "src/utilisateurs/utilisateur.entity/utilisateur.entity";
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany, OneToOne } from "typeorm";
 
 @Entity()
@@ -16,4 +17,7 @@ export class LoueurEntity {
 
     @Column({length:15})
     tel : string;
+
+    @OneToOne(()=>UtilisateurEntity, (utilisateur)=> utilisateur.loueur)
+    utilisateur: UtilisateurEntity;
 }

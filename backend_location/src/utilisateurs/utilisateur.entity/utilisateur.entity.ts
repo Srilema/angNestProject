@@ -1,3 +1,4 @@
+import { LoueurEntity } from "src/loueurs/loueur.entity/loueur.entity";
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany, OneToOne } from "typeorm";
 
 @Entity()
@@ -10,4 +11,7 @@ export class UtilisateurEntity {
 
     @Column({ length : 50 })
     mdp : string;
+
+    @OneToOne(()=>LoueurEntity, (loueur)=> loueur.utilisateur)
+    loueur: LoueurEntity;
 }
