@@ -19,9 +19,11 @@ export class LoueurEntity {
     @Column({length:15})
     tel : string;
 
+    //utilisateurs
     @OneToOne(()=>UtilisateurEntity, (utilisateur)=> utilisateur.loueur)
     utilisateur: UtilisateurEntity;
 
+    //locations
     @ManyToOne(() => LocationEntity, location => location.loueurs)
     location: LocationEntity; 
 
