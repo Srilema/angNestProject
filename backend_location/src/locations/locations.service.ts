@@ -12,7 +12,7 @@ export class LocationsService {
     }
 
     async getLocation(_id: number): Promise<LocationEntity[]> {
-        return await this.locationsRepository.findOne({
+        return await this.locationsRepository.find({
             where: [{ "id": _id }],
             relations:["locatag"]
         });
