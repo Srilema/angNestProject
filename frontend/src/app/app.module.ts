@@ -7,6 +7,7 @@ import { LocationComponent } from './location/location.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { RouterModule } from '@angular/router';
 import { AddLocationComponent } from './add-location/add-location.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { AddLocationComponent } from './add-location/add-location.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
