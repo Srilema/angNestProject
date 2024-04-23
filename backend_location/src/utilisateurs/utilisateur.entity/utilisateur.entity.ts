@@ -13,5 +13,5 @@ export class UtilisateurEntity {
     mdp : string;
 
     @OneToOne(()=>LoueurEntity, (loueur)=> loueur.utilisateur)
-    loueur: LoueurEntity;
+    loueur: LoueurEntity; 
 }
