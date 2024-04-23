@@ -10,7 +10,5 @@ export class RegionEntity{
 
     @Column({ length: 45 })
     name:string;
-
-   
 }
 
