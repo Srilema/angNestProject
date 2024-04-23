@@ -1,3 +1,4 @@
+import { LocationEntity } from "src/locations/location.entity/location.entity";
 import { UtilisateurEntity } from "src/utilisateurs/utilisateur.entity/utilisateur.entity";
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany, OneToOne } from "typeorm";
 
@@ -18,6 +19,10 @@ export class LoueurEntity {
     @Column({length:15})
     tel : string;
 
+    @OneToMany(()=> LocationEntity,(location)=>location.loueur)
+    locations: LocationEntity[];
+
+    //utilisateurs
     @OneToOne(()=>UtilisateurEntity, (utilisateur)=> utilisateur.loueur)
     utilisateur: UtilisateurEntity;
 }
