@@ -21,7 +21,7 @@ export class UtilisateurEntity {
     @Column({length:15})
     tel : string;
 
-    @Column({ length : 50 })
+    @Column({ length : 50, select: false })
     mdp : string;
 
     @OneToMany(()=> LocationEntity,(location)=>location.utilisateur)
