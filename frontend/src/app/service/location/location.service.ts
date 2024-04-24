@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Location } from '../../interface/location';
+import { map } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,11 +12,13 @@ export class LocationService {
 
   getLocations()
   {
-    return this.http.get('http://localhost:3100/locations');
+    return this.http.get('http://localhost:3100/locations').pipe(
+      map((data: any) => data as Array<any>)
+    );
   }
 
   postLocation(data:any){
-    return this.http.post('lien servback', data);
+    return this.http.post('http://localhost:3100/locations', data);
   }
 
 
