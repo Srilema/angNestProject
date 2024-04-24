@@ -4,7 +4,6 @@ import { AppService } from './app.service';
 import { LocationsModule } from './locations/locations.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { VillesModule } from './villes/villes.module';
-import { LoueursModule } from './loueurs/loueurs.module';
 import { UtilisateursModule } from './utilisateurs/utilisateurs.module';
 import { PhotosModule } from './photos/photos.module';
 import { RegionsModule } from './regions/regions.module';
@@ -24,7 +23,6 @@ import { LocatagsModule } from './locatags/locatags.module';
 }),
 LocationsModule,
 VillesModule,
-LoueursModule,
 UtilisateursModule,
 PhotosModule,
 RegionsModule,

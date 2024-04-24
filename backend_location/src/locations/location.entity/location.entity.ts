@@ -1,6 +1,6 @@
 import { LocatagEntity } from "src/locatags/locatag.entity/locatag.entity";
-import { LoueurEntity } from "src/loueurs/loueur.entity/loueur.entity";
 import { PhotoEntity } from "src/photos/photo.entity/photo.entity";
+import { UtilisateurEntity } from "src/utilisateurs/utilisateur.entity/utilisateur.entity";
 import { Entity,PrimaryGeneratedColumn,Column, ManyToOne, OneToMany } from "typeorm";
 
 @Entity()
@@ -21,8 +21,8 @@ export class LocationEntity {
     @Column({ length: 250 })
     description:string;
 
-    @ManyToOne(()=> LoueurEntity,(loueur)=>loueur.locations)
-    loueur: LoueurEntity;
+    @ManyToOne(()=> UtilisateurEntity,(utilisateur)=>utilisateur.locations)
+    utilisateur: UtilisateurEntity
 
     @ManyToOne(()=>LocatagEntity, (locatag)=>locatag.locations)
     locatag: LocatagEntity;
