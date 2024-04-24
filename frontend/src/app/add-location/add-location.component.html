@@ -1,1 +1,21 @@
-<p>add-location works!</p>
+<div class="container">
+  <form #createLocation="ngForm" (ngSubmit)="submit(createLocation.value)">
+      <div class="mb-3">
+          <label class="form-label">Titre</label>
+          <input type="text" class="form-control" id="name" name="name" ngModel>
+      </div>
+      <div class="mb-3">
+          <label class="form-label">Address</label>
+          <input type="text" class="form-control" id="adress" name="adress" ngModel>
+      </div> 
+      <div class="mb-3">
+          <label class="form-label">Prix</label>
+          <input type="number" class="form-control" id="price" name="price" ngModel>
+      </div>
+      <div class="mb-3">
+          <label class="form-label">Description</label>
+          <input type="text" class="form-control" id="description" name="description" ngModel>
+      </div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+</div>
