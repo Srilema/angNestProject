@@ -10,7 +10,7 @@ export class LocationService {
 
   getLocations()
   {
-    return this.http.get('lien serv backback');
+    return this.http.get('http://localhost:3100/locations');
   }
 
   postLocation(data:any){
