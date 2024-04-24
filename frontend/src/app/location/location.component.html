@@ -4,7 +4,7 @@
       <div *ngFor="let location of locations" class="card" style="width: 25rem;">
           <h5 class="card-title">{{ location.name }}</h5>
           <p class="card-text">{{location.description}}</p>
-          <a  class="btn btn-primary">Détail</a>
+          <a  routerLink="/detail/{{location.id}}" class="btn btn-primary">Détail</a>
         </div>
       </div>
     </div>

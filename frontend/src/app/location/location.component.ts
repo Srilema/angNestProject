@@ -13,7 +13,8 @@ export class LocationComponent {
   }
   ngOnInit() {
     let locationData = this.locationService.getLocations();
-    locationData.subscribe(res=>this.locations=res);
+
+    locationData.subscribe(res => this.locations = res);
     console.log('locations : ',this.locations);
   }
 }
