@@ -1,0 +1,36 @@
+h1{
+    text-align: center;
+    margin-bottom: 20px; /* Marge en bas */
+}
+h5 { 
+    
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    
+
+}
+.card{
+    background-color:burlywood;
+    margin-left: 25px; 
+    margin-bottom: 25px;
+}
+p{
+    text-align: center;
+    text-overflow: ellipsis; /* Ajoute des points de suspension à la fin */
+    overflow: hidden; /* Masque le surplus */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Nombre de lignes à afficher */
+    -webkit-box-orient: vertical;
+   
+    margin-bottom: 20px;
+}
+a{
+    background-color: gray;
+    border: 0px;
+    width: 150px;
+    margin-left: 100px;
+    margin-bottom: 10px;
+}
