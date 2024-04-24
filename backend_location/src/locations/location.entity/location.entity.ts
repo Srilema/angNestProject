@@ -1,5 +1,6 @@
 import { LocatagEntity } from "src/locatags/locatag.entity/locatag.entity";
 import { LoueurEntity } from "src/loueurs/loueur.entity/loueur.entity";
+import { PhotoEntity } from "src/photos/photo.entity/photo.entity";
 import { Entity,PrimaryGeneratedColumn,Column, ManyToOne, OneToMany } from "typeorm";
 
 @Entity()
@@ -25,4 +26,7 @@ export class LocationEntity {
 
     @ManyToOne(()=>LocatagEntity, (locatag)=>locatag.locations)
     locatag: LocatagEntity;
+
+    @OneToMany(()=>PhotoEntity, (photos)=>photos.location)
+    photos: PhotoEntity[]
 }

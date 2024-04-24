@@ -1,4 +1,5 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { LocationEntity } from 'src/locations/location.entity/location.entity';
+import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
 
 @Entity()
 export class PhotoEntity {
@@ -7,4 +8,7 @@ export class PhotoEntity {
     
     @Column('longtext')
     image: string;
+
+    @ManyToOne(()=>LocationEntity, (location)=>location.photos)
+    location: LocationEntity
 }
