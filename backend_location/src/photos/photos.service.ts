@@ -8,12 +8,17 @@ export class PhotosService {
     constructor(@InjectRepository(PhotoEntity) private photosRepository: Repository<PhotoEntity>) { }
 
     async getPhotos(): Promise<PhotoEntity[]> {
-        return await this.photosRepository.find();
+        return await this.photosRepository.find(
+            {
+                relations: ["location"]
+            }
+        );
     }
 
     async getPhoto(_id: number): Promise<PhotoEntity[]> {
         return await this.photosRepository.find({
-            where: [{ "id": _id }]
+            where: [{ "id": _id }],
+            relations: ["location"]
         });
     }
 
