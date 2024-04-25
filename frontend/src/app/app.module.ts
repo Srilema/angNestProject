@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { LocationsDetailsComponent } from './locations-details/locations-details.component';
 import { FormsModule } from '@angular/forms';
 import { ConnexionComponent } from './connexion/connexion.component';
+import { CreationCompteComponent } from './creation-compte/creation-compte.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { ConnexionComponent } from './connexion/connexion.component';
     AccueilComponent,
     AddLocationComponent,
     LocationsDetailsComponent,
-    ConnexionComponent
+    ConnexionComponent,
+    CreationCompteComponent
   ],
   imports: [
     BrowserModule,
