@@ -8,13 +8,15 @@ export class LocationsService {
     constructor(@InjectRepository(LocationEntity) private locationsRepository: Repository<LocationEntity>) { }
 
     async getLocations(): Promise<LocationEntity[]> {
-        return await this.locationsRepository.find();
+        return await this.locationsRepository.find({
+            relations: ["locatag", "photos"]
+        });
     }
 
     async getLocation(_id: number): Promise<LocationEntity[]> {
         return await this.locationsRepository.find({
             where: [{ "id": _id }],
-            relations:["locatag"]
+            relations:["locatag", "photos"]
         });
     }
 

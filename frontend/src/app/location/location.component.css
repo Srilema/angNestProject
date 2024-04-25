@@ -1,0 +1,53 @@
+h1{
+    text-align: center;
+    margin-bottom: 20px; /* Marge en bas */
+}
+h5 { 
+    
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    
+
+}
+.card{
+    background-color:#D1AA80;
+    margin-left: 25px; 
+    margin-bottom: 25px;
+}
+p{
+    text-align: center;
+    text-overflow: ellipsis; /* Ajoute des points de suspension à la fin */
+    overflow: hidden; /* Masque le surplus */
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* Nombre de lignes à afficher */
+    -webkit-box-orient: vertical;
+   
+    margin-bottom: 20px;
+}
+a{
+    background-color: #624628;
+    border: 0px;
+    width: 150px;
+    margin-left: 100px;
+    margin-bottom: 10px;
+}
+
+
+button{
+    width: 40px;
+    height: 40px;
+    border: 0px;
+    margin-bottom: 10px;
+    margin-left: 20px;
+}
+.modif{
+    
+    background-color:cornflowerblue;
+}
+.supp{
+ 
+    background-color:red;
+}
