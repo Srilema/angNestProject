@@ -8,12 +8,15 @@ export class LocatagsService {
     constructor(@InjectRepository(LocatagEntity) private locatagsRepository: Repository<LocatagEntity>) { }
 
     async getLocatags(): Promise<LocatagEntity[]> {
-        return await this.locatagsRepository.find();
+        return await this.locatagsRepository.find({
+            relations: ["locations", "tags"]
+        });
     }
 
     async getLocatag(_id: number): Promise<LocatagEntity[]> {
         return await this.locatagsRepository.find({
-            where: [{ "id": _id }]
+            where: [{ "id": _id }],
+            relations:["locations", "tags"]
         });
     }
 
