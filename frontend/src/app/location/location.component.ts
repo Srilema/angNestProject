@@ -16,6 +16,22 @@ export class LocationComponent {
 
     locationData.subscribe(res => this.locations = res);
     console.log('locations : ',this.locations);
+    
   }
+  deleteItem(itemId: number) {
+    this.locationService.deleteLocation(itemId)
+        .subscribe(
+            () => {
+                console.log('Suppression réussie');
+                // Mettez ici tout code à exécuter après la suppression réussie
+            },
+            error => {
+                console.error('Erreur lors de la suppression : ', error);
+                // Gérez ici l'erreur
+            }
+        );
+}
+
+
 }
 

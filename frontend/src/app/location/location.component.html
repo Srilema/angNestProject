@@ -4,7 +4,12 @@
       <div *ngFor="let location of locations" class="card" style="width: 25rem;">
           <h5 class="card-title">{{ location.name }}</h5>
           <p class="card-text">{{location.description}}</p>
+          <div>
           <a  routerLink="/detail/{{location.id}}" class="btn btn-primary">Détail</a>
+          <button type="submit" class="btn btn-primary modif">M </button>
+          <button type="button" class="btn btn-primary supp" (click)="deleteItem(location.id)">S</button>
+
+        </div>
         </div>
       </div>
     </div>
