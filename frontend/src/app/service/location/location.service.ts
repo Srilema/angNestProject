@@ -21,6 +21,12 @@ export class LocationService {
     return this.http.post('http://localhost:3100/locations', data);
   }
 
+  deleteLocation(id: any) {
+    return this.http.delete(`http://localhost:3100/location/${id}`);
+}
+
+  
+
 
 
 }
