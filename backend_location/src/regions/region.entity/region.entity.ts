@@ -1,4 +1,5 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { VilleEntity } from 'src/villes/ville.entity/ville.entity';
+import { Entity, Column, PrimaryGeneratedColumn, OneToOne } from 'typeorm';
 
 @Entity()
 export class RegionEntity {
@@ -11,4 +12,6 @@ export class RegionEntity {
     @Column({ length: 250 })
     name:string;
 
+    @OneToOne(()=>VilleEntity, (ville)=>ville.region)
+    ville: VilleEntity
 }

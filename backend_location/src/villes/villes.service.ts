@@ -8,12 +8,15 @@ export class VillesService {
     constructor(@InjectRepository(VilleEntity) private villesRepository: Repository<VilleEntity>) { }
 
     async getVilles(): Promise<VilleEntity[]> {
-        return await this.villesRepository.find();
+        return await this.villesRepository.find({
+            relations: ["location", "region"]
+        });
     }
 
     async getVille(_id: number): Promise<VilleEntity[]> {
         return await this.villesRepository.find({
-            where: [{ "id": _id }]
+            where: [{ "id": _id }],
+            relations: ["location", "region"]
         });
     }
 

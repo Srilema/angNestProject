@@ -13,7 +13,8 @@ export class RegionsService {
 
     async getRegion(_id: number): Promise<RegionEntity[]> {
         return await this.regionsRepository.find({
-            where: [{ "id": _id }]
+            where: [{ "id": _id }],
+            relations: ["ville"]
         });
     }
 
