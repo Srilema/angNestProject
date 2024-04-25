@@ -10,6 +10,7 @@ import { AddLocationComponent } from './add-location/add-location.component';
 import { HttpClientModule } from '@angular/common/http';
 import { LocationsDetailsComponent } from './locations-details/locations-details.component';
 import { FormsModule } from '@angular/forms';
+import { ConnexionComponent } from './connexion/connexion.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { FormsModule } from '@angular/forms';
     LocationComponent,
     AccueilComponent,
     AddLocationComponent,
-    LocationsDetailsComponent
+    LocationsDetailsComponent,
+    ConnexionComponent
   ],
   imports: [
     BrowserModule,
