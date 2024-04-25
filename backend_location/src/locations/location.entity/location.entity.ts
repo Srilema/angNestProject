@@ -31,6 +31,6 @@ export class LocationEntity {
     @OneToMany(()=>PhotoEntity, (photos)=>photos.location)
     photos: PhotoEntity[]
 
-    @OneToOne(()=>VilleEntity, (ville)=>ville.location)
+    @ManyToOne(()=>VilleEntity, (ville)=>ville.location)
     ville: VilleEntity
 }
