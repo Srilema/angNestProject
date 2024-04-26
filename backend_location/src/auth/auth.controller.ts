@@ -10,7 +10,7 @@ export class AuthController {
   @UseGuards(AuthGuard('local'))
   @Post('login')
   signIn(@Request() req) {
-    return this.authService.signIn(req.mail);
+    return this.authService.signIn(req.mail, req.pass);
   }
 }
 
