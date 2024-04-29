@@ -10,7 +10,8 @@ export class LocationsService {
     async getLocations(): Promise<LocationEntity[]> {
         return await this.locationsRepository.find({
             relations: ["locatag", "photos"]
-        });
+        }
+        );
     }
 
     async getLocation(_id: number): Promise<LocationEntity[]> {

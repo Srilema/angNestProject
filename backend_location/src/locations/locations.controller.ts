@@ -1,6 +1,7 @@
 import { Controller, Post, Body, Get, Put, Delete,Param} from '@nestjs/common';
 import { LocationsService } from './locations.service';
 import { LocationEntity } from './location.entity/location.entity';
+import { Logger } from '@nestjs/common/services';
 
 @Controller('locations')
 export class LocationsController {
@@ -8,11 +9,13 @@ export class LocationsController {
 
     @Get()
     getAll(@Param() params) {
+        Logger.log("locations");
         return this.service.getLocations();
     }
 
     @Get(':id')
     get(@Param() params) {
+        Logger.log("locations" + params.id);
         return this.service.getLocation(params.id);
     }
 
