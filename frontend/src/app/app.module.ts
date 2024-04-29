@@ -7,17 +7,27 @@ import { LocationComponent } from './location/location.component';
 import { AccueilComponent } from './accueil/accueil.component';
 import { RouterModule } from '@angular/router';
 import { AddLocationComponent } from './add-location/add-location.component';
+import { HttpClientModule } from '@angular/common/http';
+import { LocationsDetailsComponent } from './locations-details/locations-details.component';
+import { FormsModule } from '@angular/forms';
+import { ConnexionComponent } from './connexion/connexion.component';
+import { CreationCompteComponent } from './creation-compte/creation-compte.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LocationComponent,
     AccueilComponent,
-    AddLocationComponent
+    AddLocationComponent,
+    LocationsDetailsComponent,
+    ConnexionComponent,
+    CreationCompteComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

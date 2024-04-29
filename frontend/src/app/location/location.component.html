@@ -1,1 +1,13 @@
-<p>location works!</p>
+<div class="container mt-5">
+    <h1>Listes des locations</h1>
+    <div class="row">
+      <div *ngFor="let location of locations" class="card" style="width: 25rem;">
+      <img [src]="location.photos[0].image" class="card-img-top" alt="...">
+          <h5 class="card-title">{{ location.name }}</h5>
+          <p class="card-text">{{location.description}}</p>
+          <div>
+          <a  routerLink="/detail/{{location.id}}" class="btn btn-primary">Détail</a>
+        </div>
+        </div>
+      </div>
+    </div>
