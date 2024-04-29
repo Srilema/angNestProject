@@ -12,7 +12,8 @@ export class AuthController {
   @Post('login')
   signIn(@Request() req) {
     Logger.log("auth.controller l13")
-    return this.authService.signIn(req.mail, req.pass);
+    console.log(req.body);
+    return this.authService.signIn(req.body.mail, req.body.pass);
   }
 
   /*@UseGuards(AuthGuard('local'))
