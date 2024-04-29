@@ -6,22 +6,22 @@ export class UtilisateurEntity {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({length: 3})
+    @Column({length: 3, nullable: false})
     civil: string;
 
-    @Column({ length : 45 })
+    @Column({ length : 45, nullable: false})
     nom : string;
 
-    @Column({length:50})
+    @Column({length:50, nullable: false})
     role: string;
 
-    @Column({length: 50})
+    @Column({length: 50, nullable: false})
     mail: string;
 
-    @Column({length:15})
+    @Column({length:15, nullable: false})
     tel : string;
 
-    @Column({ length : 50, select: false })
+    @Column({ length : 50, select: false, nullable: false })
     mdp : string;
 
     @OneToMany(()=> LocationEntity,(location)=>location.utilisateur)
