@@ -12,6 +12,10 @@ import { LocationsDetailsComponent } from './locations-details/locations-details
 import { FormsModule } from '@angular/forms';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { CreationCompteComponent } from './creation-compte/creation-compte.component';
+import { AvocatComponent } from './avocat/avocat.component';
+import { AvocatDetailsComponent } from './avocat-details/avocat-details.component';
+import { ProtectionComponent } from './protection/protection.component';
+import { ProtectionDetailsComponent } from './protection-details/protection-details.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +25,11 @@ import { CreationCompteComponent } from './creation-compte/creation-compte.compo
     AddLocationComponent,
     LocationsDetailsComponent,
     ConnexionComponent,
-    CreationCompteComponent
+    CreationCompteComponent,
+    AvocatComponent,
+    AvocatDetailsComponent,
+    ProtectionComponent,
+    ProtectionDetailsComponent
   ],
   imports: [
     BrowserModule,

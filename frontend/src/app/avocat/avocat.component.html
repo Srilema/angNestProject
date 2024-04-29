@@ -1,0 +1,15 @@
+<div class="container mt-5">
+    <h1>Listes des avocats</h1>
+    <div class="row">
+      <div *ngFor="let avocat of avocats" class="card" style="width: 25rem;">
+          <h5 class="card-title">{{ avocat.name }}</h5>
+          <p class="card-text">{{avocat.description}}</p>
+          <div>
+          <a  routerLink="/detail/{{avocat.id}}" class="btn btn-primary">Détail</a>
+          <button type="submit" class="btn btn-primary modif">M </button>
+          <button type="button" class="btn btn-primary supp" (click)="deleteItem(avocat.id)">S</button>
+
+        </div>
+        </div>
+      </div>
+    </div>

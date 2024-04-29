@@ -9,6 +9,8 @@ import { PhotosModule } from './photos/photos.module';
 import { RegionsModule } from './regions/regions.module';
 import { TagsModule } from './tags/tags.module';
 import { LocatagsModule } from './locatags/locatags.module';
+import { AvocatsModule } from './avocats/avocats.module';
+
 
 @Module({
   imports: [TypeOrmModule.forRoot({
@@ -27,7 +29,9 @@ UtilisateursModule,
 PhotosModule,
 RegionsModule,
 TagsModule,
-LocatagsModule],
+AvocatsModule,
+LocatagsModule,
+AvocatsModule],
   controllers: [AppController],
   providers: [AppService],
 })
