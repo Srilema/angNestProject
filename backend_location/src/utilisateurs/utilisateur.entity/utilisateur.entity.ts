@@ -6,7 +6,7 @@ export class UtilisateurEntity {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({length: 3, nullable: false})
+    @Column({length: 10})
     civil: string;
 
     @Column({ length : 45, nullable: false})
