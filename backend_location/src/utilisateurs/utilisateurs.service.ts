@@ -14,6 +14,7 @@ export class UtilisateursService {
     async getUtilisateur(_id: number): Promise<UtilisateurEntity> {
         return await this.utilisateurRepository.findOne({
             where: {id: _id},
+            relations: ["locations"]
         });
     }
 
