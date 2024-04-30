@@ -12,6 +12,8 @@ import { LocationsDetailsComponent } from './locations-details/locations-details
 import { FormsModule } from '@angular/forms';
 import { ConnexionComponent } from './connexion/connexion.component';
 import { CreationCompteComponent } from './creation-compte/creation-compte.component';
+import { LocationUtilisateurComponent } from './location-utilisateur/location-utilisateur.component';
+import { ModalProfilComponent } from './modal-profil/modal-profil.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { CreationCompteComponent } from './creation-compte/creation-compte.compo
     AddLocationComponent,
     LocationsDetailsComponent,
     ConnexionComponent,
-    CreationCompteComponent
+    CreationCompteComponent,
+    LocationUtilisateurComponent,
+    ModalProfilComponent
   ],
   imports: [
     BrowserModule,
