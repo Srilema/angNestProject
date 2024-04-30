@@ -10,16 +10,16 @@ export class LocationEntity {
     @PrimaryGeneratedColumn()
     id: number;
 
-    @Column({ length: 250 })
+    @Column({ length: 250, nullable: false })
     name:string;
 
-    @Column('decimal', { precision: 6, scale: 2 })
+    @Column('decimal', { precision: 6, scale: 2 },)
     price: number;
 
-    @Column({ length: 250 })
+    @Column({ length: 250, nullable: false })
     adress:string;
 
-    @Column({ length: 250 })
+    @Column({ length: 250, nullable: false })
     description:string;
 
     @ManyToOne(()=> UtilisateurEntity,(utilisateur)=>utilisateur.locations)

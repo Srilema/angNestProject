@@ -18,6 +18,13 @@ export class UtilisateursService {
         });
     }
 
+    async getOneUtilisateur(_mail: string): Promise<UtilisateurEntity> {
+        return await this.utilisateurRepository.findOne({
+            where: {mail:_mail},
+            select: ['id', 'mail', 'mdp']
+        });
+      }
+
      async createUtilisateur(utilisateur: UtilisateurEntity) {
         return await this.utilisateurRepository.save(utilisateur)
     }
