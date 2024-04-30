@@ -14,6 +14,8 @@ loginForm!: FormGroup;
 mail:string;
 pass:string;
 isAuthenticated: boolean = false;
+idConnexion:any
+data:any
 
   constructor(
     private formBuilder: FormBuilder, 
@@ -43,6 +45,7 @@ isAuthenticated: boolean = false;
         },
         (error) => {
           console.error('Erreur de connexion', error);
+          this.isAuthenticated = false;
         }
       );
     } else {
