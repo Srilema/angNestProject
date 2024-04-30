@@ -19,4 +19,9 @@ export class UtilisateurService {
   postUtilisateur(data:any){
     return this.http.post('http://localhost:3100/utilisateurs', data);
   }
+
+  deleteUtilisateur(id:number)
+  {
+    return this.http.delete('http://localhost:3100/utilisateurs/${id}')
+  }
 }

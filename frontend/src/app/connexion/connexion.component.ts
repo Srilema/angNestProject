@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { ConnexionService } from '../service/connexion/connexion.service';
+import { AuthService } from '../service/auth/auth.service';
+
 
 @Component({
   selector: 'app-connexion',
@@ -10,10 +11,13 @@ import { ConnexionService } from '../service/connexion/connexion.service';
 })
 export class ConnexionComponent {
 loginForm!: FormGroup;
+mail:string;
+pass:string;
+isAuthenticated: boolean = false;
 
   constructor(
     private formBuilder: FormBuilder, 
-    private connexionService: ConnexionService,
+    private authService: AuthService,
     private router: Router
   ) {}
 
@@ -28,17 +32,13 @@ loginForm!: FormGroup;
 
     if (data!== null) {
       const mail =data.mail;
-      const pass = data.mdp;
+      const pass = data.pass;
       console.log('mail :',mail);
       console.log('pass:',pass);
-      this.connexionService.login(mail, pass).subscribe(
+      this.authService.login(mail, pass).subscribe(
         (data) => {
           console.log('Connexion réussie', data);
-          // Récupérer le token depuis la réponse
-          //const token = data.token;
-          // Stocker le token dans le localStorage ou dans un service
-          //localStorage.setItem('token', token);
-          // Redirection vers une autre page
+          this.isAuthenticated = true;
           this.router.navigate(['/accueil']);
         },
         (error) => {
@@ -49,4 +49,11 @@ loginForm!: FormGroup;
       console.log('Formulaire invalide');
     }
   }
+  
+  logout() {
+    // Réinitialiser l'état d'authentification et rediriger vers la page de connexion
+    this.isAuthenticated = false;
+    this.router.navigate(['/connexion']);
+  }
+
 }
