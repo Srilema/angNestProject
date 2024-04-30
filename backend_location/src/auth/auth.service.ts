@@ -18,6 +18,10 @@ export class AuthService {
       Logger.log('auth.service 21' + utilisateur);
       console.log(utilisateur);
       console.log(utilisateur?.mdp);
+      //check if user is found and obejct isn't null
+      if (utilisateur == null){
+        throw new UnauthorizedException();
+      }
       //check if password are same
       if (utilisateur.mdp !== pass) {
         Logger.log('auth.service 23');
